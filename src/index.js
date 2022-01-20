@@ -10,7 +10,18 @@ const theme = {
     useSystemColorMode: true,
   },
   colors: {
-    brand: {},
+    green: {
+      50: "#e6efdb",
+      100: "#dae7ca",
+      200: "#c1d8a6",
+      300: "#a8c882",
+      400: "#9bc071",
+      500: "#82b04d",
+      600: "#688d3e",
+      700: "#4e6a2e",
+      800: "#34461f",
+      900: "#1a230f",
+    },
   },
 };
 
