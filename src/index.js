@@ -2,10 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+const theme = {
+  congfig: {
+    initialColorMode: "light",
+    useSystemColorMode: true,
+  },
+  colors: {
+    brand: {},
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={extendTheme(theme)}>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
