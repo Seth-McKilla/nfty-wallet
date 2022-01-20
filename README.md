@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+<!-- REPLACE LINK WITH LIVE PROJECT SITE (IF APPLICABLE) -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to [Nfty Links]()!
 
-## Available Scripts
+<!-- REPLACE IMAGE WITH PROJECT SCREENSHOT -->
 
-In the project directory, you can run:
+<!-- ![phonograph-record-gc0d1ee08a_640](https://user-images.githubusercontent.com/63591760/146698943-9976f388-2fc7-4964-a358-edd6832774f4.jpg) -->
 
-### `npm start`
+<!-- REPLACE WITH A SIMPLE TAGLINE FOR THE PROJECT -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### _This is why you should use my project._
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- INSERT BOUNTY NAME AND LINK TO BOUNTY -->
 
-### `npm test`
+## Hackathon submission
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was created as a submission for the [INSERT BOUNTY NAME](https://gitcoin.co/) bounty within Gitcoin's <INSERT HACKATHON NAME (IF APPLICABLE)>.
 
-### `npm run build`
+## Motivation for the project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- INSERT SMALL PITCH OF PROBLEM YOU'RE SOLVING, VALUE PROPOSITION, ETC. REFER TO https://www.canva.com/design/DAEhUeYe_fo/view FOR IDEAS -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- REPLACE URL WITH LINK TO YOUTUBE VIDEO OR SHARE DRIVE -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo of the project
 
-### `npm run eject`
+Check out the a demo video of the project [here](https://www.youtube.com/)!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contact info for questions or feedback
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Wallet Address: WALLET ADDRESS**
+<br>
+**Discord: DISCORD NAME**
+<br>
+**Email: EMAIL ADDRESS**
+<br>
+**Twitter: TWITTER HANDLE**
+<br>
+**Gitcoin: GITCOIN PROFILE**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- COPY AND PASTE TECH STACK AS NEEDED -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## The tech stack
 
-## Learn More
+NAME: URL REFERENCE
+<br>
+NAME: URL REFERENCE
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+<!-- LIST PREREQUISITES NEEDED TO SETUP THE PROJECT (SOFTWARE LIKE NODEJS, ACCOUNT WITH 3RD PARTY PROVIDER, ETC.) -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Setup local development environment (backend)
 
-### Analyzing the Bundle Size
+1. Clone the repo and navigate into the directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+git clone <INSERT REMOTE REPO URL>
+...
+```
 
-### Making a Progressive Web App
+2. <INSERT STEP 2 NAME>:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+STEP 2 COMMAND
+```
 
-### Advanced Configuration
+<!-- ADD AS MANY STEPS AS NEEDED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Setup local development environment (frontend)
 
-### Deployment
+1. Clone the repo and navigate into the directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+git clone https://github.com/Seth-McKilla/unstoppable-portfolio.git
+cd unstoppable-portfolio
+```
 
-### `npm run build` fails to minify
+2. <INSERT STEP 2 NAME>:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+STEP 2 COMMAND
+```
+
+<!-- ADD AS MANY STEPS AS NEEDED -->
+
+### Thanks for checking out the project!
