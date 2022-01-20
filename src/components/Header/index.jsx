@@ -8,9 +8,10 @@ export default function Header({ showNavButton = true, onShowNav }) {
         {showNavButton && (
           <IconButton
             icon={<ChevronRightIcon w={8} h={8} />}
-            colorScheme="blackAlpha"
             variant="outline"
             onClick={onShowNav}
+            border="2px"
+            borderColor="black"
           />
         )}
       </Box>

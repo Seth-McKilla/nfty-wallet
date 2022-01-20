@@ -5,16 +5,26 @@ import {
   Drawer,
   DrawerOverlay,
   DrawerCloseButton,
-  DrawerHeader,
   DrawerBody,
   DrawerContent,
   VStack,
   IconButton,
+  Flex,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import DarkModeToggle from "react-dark-mode-toggle";
+import _ from "lodash";
 
 function SidebarContent({ onClick }) {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const btnBg = useColorModeValue("white", "black");
+  const btnBgHover = useColorModeValue("gray.300", "gray.800");
+
+  const links = ["home", "collection", "about"];
+
   return (
-    <VStack>
+    <VStack h="100%">
       <IconButton
         bg="none"
         w="100%"
@@ -26,15 +36,23 @@ function SidebarContent({ onClick }) {
       >
         <img src="/images/logo_transparent.png" alt="logo" />
       </IconButton>
-      <Button onClick={onClick} w="100%">
-        Home
-      </Button>
-      <Button onClick={onClick} w="100%">
-        My NFTs
-      </Button>
-      <Button onClick={onClick} w="100%">
-        About
-      </Button>
+      {links.map((link, idx) => (
+        <Button
+          key={`${idx}-${link}`}
+          onClick={onClick}
+          bg={btnBg}
+          _hover={{ bg: btnBgHover }}
+          w="100%"
+        >
+          {_.startCase(link)}
+        </Button>
+      ))}
+      <Flex grow="1" />
+      <DarkModeToggle
+        onChange={toggleColorMode}
+        checked={colorMode === "dark"}
+        size={80}
+      />
     </VStack>
   );
 }
@@ -48,14 +66,14 @@ export default function Navigation({ isOpen, variant, onClose }) {
       w="200px"
       top={0}
       h="100%"
-      bg="green.500"
+      bg="purple.400"
     >
       <SidebarContent onClick={onClose} />
     </Box>
   ) : (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
       <DrawerOverlay>
-        <DrawerContent w="200px" h="100%" bg="green.500" p={5}>
+        <DrawerContent w="200px" h="100%" bg="purple.400" p={5}>
           <DrawerCloseButton />
           <DrawerBody>
             <SidebarContent onClick={onClose} />
