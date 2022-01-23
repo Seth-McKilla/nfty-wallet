@@ -57,7 +57,7 @@ function SidebarContent({ onClick }) {
   );
 }
 
-export default function Navigation({ isOpen, variant, onClose }) {
+export default function Navigation({ isOpen, variant, onClose, onClick }) {
   return variant === "sidebar" ? (
     <Box
       position="fixed"
@@ -68,7 +68,7 @@ export default function Navigation({ isOpen, variant, onClose }) {
       h="100%"
       bg="purple.400"
     >
-      <SidebarContent onClick={onClose} />
+      <SidebarContent onClick={onClick} />
     </Box>
   ) : (
     <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -76,7 +76,7 @@ export default function Navigation({ isOpen, variant, onClose }) {
         <DrawerContent w="200px" h="100%" bg="purple.400" p={5}>
           <DrawerCloseButton />
           <DrawerBody>
-            <SidebarContent onClick={onClose} />
+            <SidebarContent onClick={onClick} />
           </DrawerBody>
         </DrawerContent>
       </DrawerOverlay>
