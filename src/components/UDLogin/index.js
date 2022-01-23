@@ -2,7 +2,7 @@ import { Button } from "@chakra-ui/react";
 
 export default function UDLogin({ height = 40, onLogin }) {
   return (
-    <Button color="purple.500" m={6} p={0} onClick={onLogin}>
+    <Button color="purple.500" p={0} onClick={onLogin}>
       <img
         alt="unstoppable-login-button"
         draggable="false"

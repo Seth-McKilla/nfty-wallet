@@ -54,13 +54,13 @@ export default function App() {
 
     switch (route) {
       case "home":
-        return <HomeView onLogin={handleLogin} showLogin={!!user} />;
+        return <HomeView onLogin={handleLogin} showLogin={!!!user} />;
       case "collection":
         return <div>Collection</div>;
       case "about":
         return <div>About</div>;
       default:
-        return <HomeView onLogin={handleLogin} showLogin={!!user} />;
+        return <HomeView onLogin={handleLogin} showLogin={!!!user} />;
     }
   };
 

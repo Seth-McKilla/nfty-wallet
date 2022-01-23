@@ -7,8 +7,11 @@ import {
   MenuList,
   MenuItem,
   Button,
+  Text,
+  Image,
 } from "@chakra-ui/react";
 import { ChevronRightIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import { UDLogin } from "..";
 
 export default function Header({
   showNavButton = true,
@@ -32,12 +35,33 @@ export default function Header({
       </Box>
       <Flex justifyContent="flex-end">
         <Menu>
-          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            Actions
-          </MenuButton>
-          <MenuList>
-            <MenuItem>Disconnect</MenuItem>
-          </MenuList>
+          {user ? (
+            <>
+              <MenuButton
+                as={Button}
+                rightIcon={<ChevronDownIcon />}
+                w={200}
+                pl={0}
+              >
+                <Flex direction="row" alignItems="center">
+                  <Image
+                    src="https://docs.unstoppabledomains.com/~/files/v0/b/gitbook-28427.appspot.com/o/assets%2F-MF1CaqLXCtpg4trwHjh%2F-MjjpJ6gM6yNltRf0-yc%2F-MjjudfnwJ7Gm_roYy5j%2Fdefault-icon.png?alt=media&amp;token=34f41fe8-5e26-45f2-ace2-6dffb113c031"
+                    w={35}
+                    h={35}
+                    mr={3}
+                  />
+                  <Text fontSize="sm" isTruncated>
+                    {user.address}
+                  </Text>
+                </Flex>
+              </MenuButton>
+              <MenuList>
+                <MenuItem onClick={onLogout}>Disconnect</MenuItem>
+              </MenuList>
+            </>
+          ) : (
+            <UDLogin onLogin={onLogin} />
+          )}
         </Menu>
       </Flex>
     </Flex>
