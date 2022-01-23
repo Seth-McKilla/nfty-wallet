@@ -1,7 +1,22 @@
-import { Box, IconButton, Text, Flex } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  IconButton,
+  Flex,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@chakra-ui/react";
+import { ChevronRightIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
-export default function Header({ showNavButton = true, onShowNav }) {
+export default function Header({
+  showNavButton = true,
+  onShowNav,
+  onLogin,
+  onLogout,
+  user,
+}) {
   return (
     <Flex p={4} justifyContent="flex-end">
       <Box flex="1">
@@ -16,7 +31,14 @@ export default function Header({ showNavButton = true, onShowNav }) {
         )}
       </Box>
       <Flex justifyContent="flex-end">
-        <Text fontSize="xl">UD Login</Text>
+        <Menu>
+          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            Actions
+          </MenuButton>
+          <MenuList>
+            <MenuItem>Disconnect</MenuItem>
+          </MenuList>
+        </Menu>
       </Flex>
     </Flex>
   );
