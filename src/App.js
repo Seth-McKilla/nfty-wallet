@@ -2,13 +2,14 @@ import { useState } from "react";
 import uauth from "./uauth";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import { Header, Navigation } from "./components";
+import { LandingView } from "./views";
 
 const smVariant = { navigation: "drawer", navigationButton: true };
 const mdVariant = { navigation: "sidebar", navigationButton: false };
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -41,6 +42,13 @@ export default function App() {
     return window.location.reload();
   };
 
+  const renderContent = () => {
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
+    if (!user) return <LandingView onLogin={handleLogin} />;
+    return <div>Logged in as {user.name}</div>;
+  };
+
   return (
     <>
       <Navigation
@@ -56,6 +64,7 @@ export default function App() {
           onLogout={handleLogout}
           user={user}
         />
+        <Box>{renderContent()}</Box>
       </Box>
     </>
   );
