@@ -1,7 +1,7 @@
 import { useState } from "react";
 import uauth from "./uauth";
-import { Box, useBreakpointValue } from "@chakra-ui/react";
-import { Header, Navigation } from "./components";
+import { Box, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
+import { Header, Navigation, Modal } from "./components";
 import { HomeView } from "./views";
 
 const smVariant = { navigation: "drawer", navigationButton: true };
@@ -13,6 +13,7 @@ export default function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const variants = useBreakpointValue({ base: smVariant, md: mdVariant });
 
@@ -31,9 +32,9 @@ export default function App() {
       setUser(user);
     } catch (error) {
       setError(error.message);
+      onOpen();
     }
     setLoading(false);
-    return window.location.reload();
   };
 
   const handleLogout = async () => {
@@ -43,18 +44,15 @@ export default function App() {
       setUser(undefined);
     } catch (error) {
       setError(error.message);
+      onOpen();
     }
     setLoading(false);
-    return window.location.reload();
   };
 
   const renderContent = () => {
     if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
 
     switch (route) {
-      case "home":
-        return <HomeView onLogin={handleLogin} showLogin={!!!user} />;
       case "collection":
         return <div>Collection</div>;
       case "about":
@@ -66,6 +64,13 @@ export default function App() {
 
   return (
     <>
+      <Modal
+        title="Oops! Something went wrong"
+        body={error}
+        isOpen={isOpen}
+        onClose={onClose}
+      />
+
       <Navigation
         variant={variants?.navigation}
         isOpen={navOpen}
