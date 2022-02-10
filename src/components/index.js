@@ -3,3 +3,4 @@ export { default as Navigation } from "./Navigation";
 export { default as UDLogin } from "./UDLogin";
 export { default as Modal } from "./Modal";
 export { default as Card } from "./Card";
+export { default as Loading } from "./Loading";
