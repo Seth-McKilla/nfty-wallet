@@ -21,7 +21,7 @@ export default function Header({
   user,
 }) {
   return (
-    <Flex p={4} justifyContent="flex-end">
+    <Flex p={4} justifyContent="flex-end" position="fixed" right={0}>
       <Box flex="1">
         {showNavButton && (
           <IconButton

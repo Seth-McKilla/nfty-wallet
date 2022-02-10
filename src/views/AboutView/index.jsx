@@ -11,7 +11,7 @@ export default function LandingView() {
           </span>{" "}
           by{" "}
           <Link
-            href="https://github.com/Seth-McKilla"
+            href="https://twitter.com/SethMcKilla"
             isExternal
             color="purple.500"
           >
@@ -25,7 +25,7 @@ export default function LandingView() {
           </span>
           {""}
           <Link
-            href="https://unstoppabledomains.com/"
+            href="https://github.com/Seth-McKilla/nfty-wallet"
             isExternal
             color="purple.500"
           >
