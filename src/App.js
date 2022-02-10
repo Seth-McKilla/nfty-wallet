@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import uauth from "./uauth";
 import { Box, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 import { Header, Navigation, Modal } from "./components";
-import { HomeView, AboutView } from "./views";
+import { HomeView, CollectionView, AboutView } from "./views";
 
 const smVariant = { navigation: "drawer", navigationButton: true };
 const mdVariant = { navigation: "sidebar", navigationButton: false };
@@ -72,7 +72,12 @@ export default function App() {
 
     switch (route) {
       case "collection":
-        return <div>Collection</div>;
+        return (
+          <CollectionView
+            onLogin={handleLogin}
+            userAddress={user ? user.wallet_address : null}
+          />
+        );
       case "about":
         return <AboutView />;
       default:

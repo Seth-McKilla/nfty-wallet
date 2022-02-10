@@ -51,7 +51,7 @@ export default function Header({
                     mr={3}
                   />
                   <Text fontSize="sm" isTruncated>
-                    {user.address}
+                    {user.wallet_address}
                   </Text>
                 </Flex>
               </MenuButton>

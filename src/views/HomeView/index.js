@@ -18,7 +18,16 @@ export default function LandingView({ onLogin, showLogin }) {
             Unstoppable Domains
           </Link>
         </Text>
-        {showLogin && <UDLogin onLogin={onLogin} />}
+        {showLogin ? (
+          <UDLogin onLogin={onLogin} />
+        ) : (
+          <Text fontSize="2xl" align="center">
+            <span role="img" aria-label="finger">
+              👈
+            </span>{" "}
+            Check out your collection from the menu over there
+          </Text>
+        )}
       </Flex>
     </Center>
   );
