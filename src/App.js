@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import uauth from "./uauth";
 import { Box, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 import { Header, Navigation, Modal } from "./components";
@@ -31,10 +31,12 @@ export default function App() {
       const user = await uauth?.user();
       setUser(user);
     } catch (error) {
+      console.error(error);
       setError(error.message);
       onOpen();
     }
     setLoading(false);
+    return window.location.reload();
   };
 
   const handleLogout = async () => {
@@ -43,11 +45,26 @@ export default function App() {
       await uauth?.logout();
       setUser(undefined);
     } catch (error) {
+      console.error(error);
       setError(error.message);
       onOpen();
     }
     setLoading(false);
+    return window.location.reload();
   };
+
+  useEffect(() => {
+    (async () => {
+      setLoading(true);
+      try {
+        const user = await uauth?.user();
+        setUser(user);
+      } catch (error) {
+        setError(error.message);
+      }
+      return setLoading(false);
+    })();
+  }, []);
 
   const renderContent = () => {
     if (loading) return <div>Loading...</div>;
