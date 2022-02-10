@@ -1,6 +1,4 @@
-<!-- REPLACE LINK WITH LIVE PROJECT SITE (IF APPLICABLE) -->
-
-# Welcome to the [INSERT PROJECT NAME](https://unstoppable-portfolio.vercel.app/)!
+# Welcome to [Nfty Wallet](https://nfty-wallet.vercel.app/)!
 
 <!-- REPLACE IMAGE WITH PROJECT SCREENSHOT -->
 

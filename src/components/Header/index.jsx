@@ -21,7 +21,7 @@ export default function Header({
   user,
 }) {
   return (
-    <Flex p={4} justifyContent="flex-end" position="fixed" right={0}>
+    <Flex p={4} justifyContent="flex-end" position="fixed">
       <Box flex="1">
         {showNavButton && (
           <IconButton
@@ -30,10 +30,11 @@ export default function Header({
             onClick={onShowNav}
             border="2px"
             borderColor="black"
+            zIndex={10}
           />
         )}
       </Box>
-      <Flex justifyContent="flex-end">
+      <Flex justifyContent="flex-end" position="fixed" right={3}>
         <Menu>
           {user ? (
             <>

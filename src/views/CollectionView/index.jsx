@@ -10,6 +10,7 @@ import { UDLogin, Loading, Card, Modal } from "../../components";
 import useOpensea from "../../hooks/useOpensea";
 
 export default function LandingView({ onLogin, userAddress }) {
+  userAddress = "0x9C0177e8dDA1D562149F33B6Af8014228ca11E44";
   const { loading, error, nfts } = useOpensea(userAddress);
   const { isOpen, onClose } = useDisclosure();
 
@@ -58,7 +59,7 @@ export default function LandingView({ onLogin, userAddress }) {
       />
 
       <Flex direction="column" align="center">
-        {userAddress ? (
+        {true ? (
           renderContent()
         ) : (
           <>
