@@ -30,7 +30,6 @@ export default function App() {
       await uauth?.loginWithPopup();
       const user = await uauth?.user();
       setUser(user);
-      window.location.reload();
     } catch (error) {
       console.error(error);
       setError(error.message);
@@ -44,7 +43,6 @@ export default function App() {
     try {
       await uauth?.logout();
       setUser(undefined);
-      window.location.reload();
     } catch (error) {
       console.error(error);
       setError(error.message);
