@@ -1,10 +1,10 @@
 <!-- REPLACE LINK WITH LIVE PROJECT SITE (IF APPLICABLE) -->
 
-# Welcome to [Nfty Links]()!
+# Welcome to the [INSERT PROJECT NAME](https://unstoppable-portfolio.vercel.app/)!
 
 <!-- REPLACE IMAGE WITH PROJECT SCREENSHOT -->
 
-<!-- ![phonograph-record-gc0d1ee08a_640](https://user-images.githubusercontent.com/63591760/146698943-9976f388-2fc7-4964-a358-edd6832774f4.jpg) -->
+![placeholder]()
 
 <!-- REPLACE WITH A SIMPLE TAGLINE FOR THE PROJECT -->
 
@@ -59,7 +59,6 @@ NAME: URL REFERENCE
 
 ```
 git clone <INSERT REMOTE REPO URL>
-...
 ```
 
 2. <INSERT STEP 2 NAME>:

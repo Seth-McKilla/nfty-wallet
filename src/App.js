@@ -30,13 +30,13 @@ export default function App() {
       await uauth?.loginWithPopup();
       const user = await uauth?.user();
       setUser(user);
+      window.location.reload();
     } catch (error) {
       console.error(error);
       setError(error.message);
       onOpen();
     }
-    setLoading(false);
-    return window.location.reload();
+    return setLoading(false);
   };
 
   const handleLogout = async () => {
@@ -44,13 +44,13 @@ export default function App() {
     try {
       await uauth?.logout();
       setUser(undefined);
+      window.location.reload();
     } catch (error) {
       console.error(error);
       setError(error.message);
       onOpen();
     }
-    setLoading(false);
-    return window.location.reload();
+    return setLoading(false);
   };
 
   useEffect(() => {
@@ -60,6 +60,7 @@ export default function App() {
         const user = await uauth?.user();
         setUser(user);
       } catch (error) {
+        console.error(error);
         setError(error.message);
       }
       return setLoading(false);
